@@ -1,4 +1,5 @@
-const {Builder, By, Key, until} = require('selenium-webdriver');
+const {Builder, By, Key, until} = require('selenium-webdriver')
+const fs                        = require('fs')
 
 (async function test_page_one() {
   let driver = await new Builder().forBrowser('chrome').build();
@@ -9,7 +10,7 @@ const {Builder, By, Key, until} = require('selenium-webdriver');
 
     let image = await driver.takeScreenshot();
     let filename = 'test_page_one_result.png'; console.log(filename);
-    
+
     await fs.writeFile(filename, image, 'base64');
 
     send({
