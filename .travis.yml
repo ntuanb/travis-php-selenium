@@ -25,8 +25,6 @@ env:
 before_install:
   - mysql -e "create database IF NOT EXISTS $DB_NAME;"
   - echo "USE mysql;\nUPDATE user SET password=PASSWORD('password') WHERE user='root';\nFLUSH PRIVILEGES;\n" | mysql -u root
-  - mysql -u root -e "CREATE USER 'root'@'localhost' IDENTIFIED BY 'root';"
-  - mysql -u root -e "GRANT ALL ON $DB_NAME.* TO 'root'@'localhost';"
   - mysql -u root --database=$DB_NAME < migrate.sql
   - mysql -u root --database=$DB_NAME < seed.sql
 before_script:
