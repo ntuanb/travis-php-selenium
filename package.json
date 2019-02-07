@@ -1,0 +1,15 @@
+{
+  "name": "travis-nginx-php",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/ntuanb/travis-nginx-php.git",
+  "author": "Tuan Bui <tuan.bui@intrepidtravel.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "selenium-webdriver": "^4.0.0-alpha.1",
+    "sqlite": "^3.0.1"
+  },
+  "script": {
+    "test": "node index.js"
+  }
+}
