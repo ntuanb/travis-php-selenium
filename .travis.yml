@@ -24,8 +24,8 @@ env:
     - DB_NAME="test_engine"
 before_install:
   - mysql -e "create database IF NOT EXISTS $DB_NAME;"
-  - mysql -u root < migrate.sql
-  - mysql -u root < seed.sql
+  - mysql -u root -p --database=$DB_NAME < migrate.sql
+  - mysql -u root -p --database=$DB_NAME < seed.sql
 before_script:
   - nvm install v10
   - whereis google-chrome-stable
