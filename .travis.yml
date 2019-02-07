@@ -14,5 +14,9 @@ addons:
       - chromium-chromedriver
 before_script:
   - nvm install v10
+  - whereis google-chrome-stable
+  - whereis chromedriver
   - ln --symbolic /usr/lib/chromium-browser/chromedriver "${HOME}/bin/chromedriver"
-  - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost
+  - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
+  - export DISPLAY=:99.0
+  - sh -e /etc/init.d/xvfb start

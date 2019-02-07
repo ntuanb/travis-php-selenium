@@ -9,7 +9,8 @@
     "selenium-webdriver": "^4.0.0-alpha.1",
     "sqlite": "^3.0.1"
   },
-  "script": {
-    "test": "node index.js"
+  "scripts": {
+    "test": "node index.js",
+    "push": "git add . && git commit -m 'Update travis' && git push"
   }
 }
