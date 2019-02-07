@@ -6,6 +6,7 @@
   "author": "Tuan Bui <tuan.bui@intrepidtravel.com>",
   "license": "MIT",
   "devDependencies": {
+    "fs": "^0.0.1-security",
     "selenium-webdriver": "^4.0.0-alpha.1",
     "sqlite": "^3.0.1"
   },
