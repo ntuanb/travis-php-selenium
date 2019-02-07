@@ -11,8 +11,9 @@ const fs                        = require('fs');
     let image = await driver.takeScreenshot();
     let filename = 'test_page_one_result.png'; console.log(filename);
 
-    fs.writeFile(filename, image, 'base64');
-
+    fs.writeFile(filename, image, 'base64', function(err) {
+      console.log(err);
+    });
     send({
       from: 'ntuanb@gmail.com',
       to: 'ntuanb@gmail.com',
