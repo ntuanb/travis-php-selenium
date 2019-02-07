@@ -24,7 +24,6 @@ env:
     - DB_NAME="test_engine"
 before_install:
   - mysql -e "create database IF NOT EXISTS $DB_NAME;"
-  - echo "USE mysql;\nUPDATE user SET password=PASSWORD('password') WHERE user='root';\nFLUSH PRIVILEGES;\n" | mysql -u root
   - mysql -u root --database=$DB_NAME < migrate.sql
   - mysql -u root --database=$DB_NAME < seed.sql
 before_script:
