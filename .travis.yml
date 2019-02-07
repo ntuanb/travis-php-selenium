@@ -23,7 +23,8 @@ env:
   global:
     - DB_NAME="test_engine"
 before_install:
-  - mysql -e "create database IF NOT EXISTS $DB_NAME;" -uroot
+  - mysql -e "create database IF NOT EXISTS $DB_NAME;"
+  - mysql -u root < scripts/migrate.sql
 before_script:
   - nvm install v10
   - whereis google-chrome-stable
@@ -37,3 +38,5 @@ before_script:
   - ls
   - sudo service php5-fpm restart
   - sudo service nginx restart
+scripts:
+  - ls
