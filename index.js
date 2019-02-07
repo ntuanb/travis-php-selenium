@@ -1,5 +1,5 @@
-const {Builder, By, Key, until} = require('selenium-webdriver')
-const fs                        = require('fs')
+const {Builder, By, Key, until} = require('selenium-webdriver');
+const fs                        = require('fs');
 
 (async function test_page_one() {
   let driver = await new Builder().forBrowser('chrome').build();
