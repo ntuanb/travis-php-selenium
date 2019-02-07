@@ -7,6 +7,7 @@
   "license": "MIT",
   "devDependencies": {
     "fs": "^0.0.1-security",
+    "nodemailer": "^5.1.1",
     "selenium-webdriver": "^4.0.0-alpha.1",
     "sqlite": "^3.0.1"
   },
